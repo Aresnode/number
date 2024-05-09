@@ -14,5 +14,5 @@ def nombre_fixe_a_partir_d_nombre_aleatoire(nombre_aleatoire):
 
 # Exemple d'utilisation avec un nombre aléatoire
 nombre_aleatoire = 42
-resultat_fixe = nombre_fixe_a_partir_d_nombre_aleatoire(nombre_aleatoire)
+resultat_fixe = nombre_fixe_a_partir_d_nombre_aleatoire(number_aleatoire)
 print("Nombre fixe à partir du nombre aléatoire", nombre_aleatoire, ":", resultat_fixe)
