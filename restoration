@@ -1,0 +1,18 @@
+import hashlib
+
+def nombre_fixe_a_partir_d_nombre_aleatoire(nombre_aleatoire):
+    # Convertir le nombre aléatoire en une chaîne de caractères
+    chaine_nombre = str(nombre_aleatoire)
+    # Utiliser la fonction de hachage SHA-256
+    hache = hashlib.sha256()
+    hache.update(chaine_nombre.encode('utf-8'))
+    # Récupérer les premiers 8 caractères hexadécimaux de la somme de hachage
+    hex_digest = hache.hexdigest()[:8]
+    # Convertir les 8 caractères hexadécimaux en un nombre entier
+    nombre_fixe = int(hex_digest, 16)
+    return nombre_fixe
+
+# Exemple d'utilisation avec un nombre aléatoire
+nombre_aleatoire = 42
+resultat_fixe = nombre_fixe_a_partir_d_nombre_aleatoire(nombre_aleatoire)
+print("Nombre fixe à partir du nombre aléatoire", nombre_aleatoire, ":", resultat_fixe)
